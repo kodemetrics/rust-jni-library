@@ -1,0 +1,22 @@
+[package]
+name = "rust-jni-lib"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kingsley Okafor"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# name = "greetings"
+# crate-type = ["staticlib", "cdylib"]
+crate-type = ["dylib"]
+
+[dependencies]
+base64 = "0.13.0"
+image = "0.23"
+jni = "0.14"
+reqwest = "0.11.18"
+tokio = { version = "1", features = ["full"] }
+
+[build]
+target = "aarch64-linux-android"
